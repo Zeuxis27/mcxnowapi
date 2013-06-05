@@ -70,20 +70,21 @@ The variables are :
 
 The methfunctions are :
 
-1) Anonymous and user sessions :
++ Anonymous and user sessions :
 
->>S.GetCurrencyBookOrders(cur) :
+>S.GetCurrencyBookOrders(cur) :
 
     return a list with BookOrders for the currency cur
         # each element is a pair [$buy$,$sell$]
         # where $buy$ and $sell$ are order in format [$Price$,$Amout$,$AmountBTC$]
         #
-        # Remarque : CurrencyBookOrders is in the two variables S.Public.BookBuy.Orders[$currency$] and S.Public.BookSell.Orders[$currency$] of the class.
+        # Remarque : CurrencyBookOrders is in the two variables S.Public.BookBuy.Orders[$currency$] 
+        # and S.Public.BookSell.Orders[$currency$] of the class.
         # 
         # if return [] then S.ErrorCode give you the errorcode !
         #
 
->>S.GetCurrencyHistoryOrders(cur) : 
+>S.GetCurrencyHistoryOrders(cur) : 
 
     return a list with HistoryOrders for the currency cur
         # each element is a order in format [$Time$,$Type$,$Amout$,$AmountBTC$,$Price$]
@@ -93,7 +94,7 @@ The methfunctions are :
         # if return [] then S.ErrorCode give you the errorcode !
         #
         
->>S.GetCurrencyInfo(cur) :
+>S.GetCurrencyInfo(cur) :
 
     return a list with Info for the currency cur
         # each element is a order in format [$Volume$,$VolumeBTC$,$LastPrice$,$PriceLow$,$PriceHigh$]
@@ -103,7 +104,7 @@ The methfunctions are :
         # if return [] then S.ErrorCode give you the errorcode !
         #        
 
->>S.GetAllCurrencyInfo() : 
+>S.GetAllCurrencyInfo() : 
 
     return a list with Info for all currency
         # each element is a info in format $Currency$,[$Volume$,$VolumeBTC$,$LastPrice$,$PriceLow$,$PriceHigh$]
@@ -113,7 +114,7 @@ The methfunctions are :
         # if return [] then self.ErrorCode give you the errorcode !
         #
         
->>S.GetChat() : 
+>S.GetChat() : 
 
     return a list with Message in chat
         # each element is [$Id$,$User$,$Messsage$]
@@ -127,9 +128,9 @@ The methfunctions are :
 
         
         
-* User Session :
++ User Session :
 
->>S.Login(username,password)
+>S.Login(username,password)
 
     login to mcxnow.com if you have open a anonymous session or you have been disconnected
     
@@ -139,7 +140,7 @@ The methfunctions are :
         # if return 0 : self.ErrorCode give you the error !
         #
     
->>S.Logout()
+>S.Logout()
 
     logout from mcxnow.com
         #
@@ -148,26 +149,28 @@ The methfunctions are :
         # if return 0 : self.ErrorCode give you the error !
         #
         
->>S.GetUserDetails() : 
+>S.GetUserDetails() : 
 
     return a list with UserAccountInfo
-        # each element is [$Currency$,$Balance$,$Incoming$,$DepositAddress$,$MinimumDeposit$,$DepositConfirmations$,$WithdrawFee$]
+        # each element is 
+        # [$Currency$,$Balance$,$Incoming$,$DepositAddress$,$MinimumDeposit$,$DepositConfirmations$,$WithdrawFee$]
         #
         # Remarque : Account Info are in the variable User.Details of the class.
         #
         # if return [], then self.ErrorCode give you the errorcode !
         #
         
->>S.GetUserAccountInfo(cur) :
+>S.GetUserAccountInfo(cur) :
 
-    return the list [$Currency$,$Balance$,$Incoming$,$DepositAddress$,$MinimumDeposit$,$DepositConfirmations$,$WithdrawFee$]
+    return the list 
+    [$Currency$,$Balance$,$Incoming$,$DepositAddress$,$MinimumDeposit$,$DepositConfirmations$,$WithdrawFee$]
         #
         # Remarque : Account Info Currency are in the variable User.Details.Funds[$currency$] of the class.
         #
         # if return [], then self.ErrorCode give you the errorcode !
         #
         
->>S.GetUserOrders(cur) : 
+>S.GetUserOrders(cur) : 
 
     return a list with User Orders for the currency cur
         # each element is [$Id$,$Type$,$Time$,$Confirmed$,$Amount$,Price$]
@@ -178,10 +181,11 @@ The methfunctions are :
         # if return [] then self.ErrorCode give you the errorcode !
         #
         
->>S.GetUserAllOrders() :
+>S.GetUserAllOrders() :
 
         return a list with All User Orders
-        # each element is a list : [$currency$,[$Order1$,$Order2$,...]] where $OrderX$ is [$Id$,$Type$,,$Time$,$Confirmed$,$Amount$,Price$]
+        # each element is a list : 
+        # [$currency$,[$Order1$,$Order2$,...]] where $OrderX$ is [$Id$,$Type$,,$Time$,$Confirmed$,$Amount$,Price$]
         # or [None] if no orders
         #
         # Remarque : Users All Orders are in the variable User.Book of the class.
@@ -189,7 +193,7 @@ The methfunctions are :
         # if return [] then self.ErrorCode give you the errorcode !
         #
         
->>S.SendSellOrder(cur, amt, price, confirm):
+>S.SendSellOrder(cur, amt, price, confirm):
 
         #
         # SendSellOrder : send a sell order 
@@ -202,7 +206,7 @@ The methfunctions are :
         #       self.Return=[None,0,$time$,$amt$,$price$] (because this order can be executed yet)
         # 
         
->>S.SendBuyOrder(cur amt, price, confirm):
+>S.SendBuyOrder(cur amt, price, confirm):
 
         #
         # SendBuyOrder : send a buy order 
@@ -225,7 +229,7 @@ The methfunctions are :
         # 
         #       self.Return=[None,$type$,$time$,$amt$,$price$]  (order info)
 
->>S.CancelOrder(cur,id) : 
+>S.CancelOrder(cur,id) : 
 
         #
         # cancel the order id
@@ -235,7 +239,7 @@ The methfunctions are :
         # 
         #       self.Return=[None,$type$,$time$,$amt$,$price$]  (order info)
         
->>S.CancelAllOrders(cur) : 
+>S.CancelAllOrders(cur) : 
 
         # cancel all orders of one currency
         # Return 1 if success or 0 if error
@@ -252,7 +256,7 @@ The methfunctions are :
         # 
         #       self.Return=$msg$
         
-* ERROR CODE :
++ ERROR CODE :
 
         Unknown : 0
         Ok : 1
