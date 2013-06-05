@@ -458,10 +458,11 @@ class McxNowSession():
                     self.Public.History.ClearOrders(cur)
                     for i in range(1,len(orders)):
                         order_time=int(orders[i].split('<t>')[1].split('</t>')[0])#time.strftime("%a, %d %b %Y %H:%M:%S",time.localtime(float(orders[i].split('<t>')[1].split('</t>')[0])))
-                        if int(orders[i].split('<b>')[1].split('</b>')[0])==1:
-                            order_type="Buy"
-                        else:
-                            order_type="Sell"
+                        order_type=int(orders[i].split('<b>')[1].split('</b>')[0])
+                        #if int(orders[i].split('<b>')[1].split('</b>')[0])==1:
+                        #    order_type="Buy"
+                        #else:
+                        #    order_type="Sell"
                         order_price=float(orders[i].split('<p>')[1].split('</p>')[0])
                         order_amount=float(orders[i].split('<c1>')[1].split('</c1>')[0])
                         order_amountBTC=float(orders[i].split('<c2>')[1].split('</c2>')[0])
