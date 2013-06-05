@@ -21,6 +21,8 @@ For the samples, pyqt4 and mathplotlib
 NOTE: mcxnow is not affiliated with this project; this is a completely independent implementation based on the API description. Use at your own risk.
 
 
+Donations :
+----------
 
 If you find the library useful and would like to donate please send some coins here:
 
@@ -43,17 +45,19 @@ I you see error... please give me a sign !
 ENJOY ;-)
 
 
-
+Documentation :
+--------------
 
 The main class is McxNowSession.
 
 You can use her for :
 1) Anonymous session or 2) User session.
 
+Class use :
 
-    S=McxNowSession() : open a anonymous session and give you access to all data from mcxnow but you can trade.
+* S=McxNowSession() : open a anonymous session and give you access to all data from mcxnow but you can trade.
     
-    S=McxNowSession(username,password) : open a user session and give you access to all public data AND your account : you can trade !!!
+* S=McxNowSession(username,password) : open a user session and give you access to all public data AND your account : you can trade !!!
     
     
 
@@ -66,7 +70,7 @@ The variables are :
 
 The methfunctions are :
 
-* Anonymous and user sessions :
+1) Anonymous and user sessions :
 
 >>S.GetCurrencyBookOrders(cur) :
 
