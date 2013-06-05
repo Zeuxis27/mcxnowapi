@@ -247,7 +247,7 @@ The methfunctions are :
         # if return 0 then self.ErrorCode give you the errorcode !
         #
         
->>S.SendChatMsg(msg) :
+>S.SendChatMsg(msg) :
 
         # Send the $msg$ to chat
         # Return 1 if success or 0 if error
