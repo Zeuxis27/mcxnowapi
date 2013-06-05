@@ -24,12 +24,12 @@ NOTE: mcxnow is not affiliated with this project; this is a completely independe
 
 If you find the library useful and would like to donate please send some coins here:
 
- BTC : 18ZqmXd8xzUtzAhDXZwBJQgyHV8Rxo7GV1
- LTC : LVjfq1JNvCX2qHLxTzQoEfRnh4EbdZui51
- MNC : MA6RGr42cioJsCkAYLt8kV5sxjiNfDh6si
- SC : sJwUHidU7x5o7kDDxPjXVKbYq3EpLca1iV
- WDC : Wk4j5PGzUWvm311H6TPcQwK3pzNMZknPjS
- FTC : 6zVjFJNJwBN3u6esi6uW54z3vY8L3hemCv
+ * BTC : 18ZqmXd8xzUtzAhDXZwBJQgyHV8Rxo7GV1
+ * LTC : LVjfq1JNvCX2qHLxTzQoEfRnh4EbdZui51
+ * MNC : MA6RGr42cioJsCkAYLt8kV5sxjiNfDh6si
+ * SC : sJwUHidU7x5o7kDDxPjXVKbYq3EpLca1iV
+ * WDC : Wk4j5PGzUWvm311H6TPcQwK3pzNMZknPjS
+ * FTC : 6zVjFJNJwBN3u6esi6uW54z3vY8L3hemCv
  
  
 Any question, suggestion or help please send a mail to : zeuxis27@gmail.com
